@@ -177,3 +177,85 @@ O TicketQueue é uma simulação acadêmica, sem comercialização real de ingre
 **Resultado:** O terminal confirmou a publicação na branch `main` e a configuração do acompanhamento da branch remota `origin/main`.
 
 **Conclusão:** O projeto foi armazenado com sucesso no GitHub, permitindo registrar futuras atualizações e acompanhar seu desenvolvimento.
+
+---
+
+## Etapa 9 — Testes funcionais e validação do sistema
+
+**Data:** 11/11/2026
+
+**Objetivo:** Verificar o funcionamento da fila circular FIFO, o controle de estoque e as regras de atendimento do TicketQueue.
+
+### Teste 1 — Cadastro de participantes
+
+**Procedimento:**
+Foram cadastrados três participantes, na seguinte ordem:
+
+1. Ana
+2. Raissa
+3. Bia
+
+**Resultado:** Os participantes foram adicionados corretamente à fila, respeitando a ordem de entrada.
+
+**Status:** Aprovado.
+
+### Teste 2 — Atendimento FIFO
+
+**Procedimento:**
+Após o cadastro dos três participantes, foi acionada a opção de chamar o próximo participante.
+
+**Resultado:** Ana foi chamada primeiro, enquanto Raissa e Bia permaneceram aguardando.
+
+**Status:** Aprovado.
+
+### Teste 3 — Confirmação da compra
+
+**Procedimento:**
+Foi confirmada a compra do ingresso pela primeira participante atendida.
+
+**Resultado:**
+- Estoque inicial: 10 ingressos.
+- Estoque após a compra: 9 ingressos.
+- Ingressos vendidos: 1.
+- Participantes aguardando: 2.
+
+**Status:** Aprovado.
+
+### Teste 4 — Capacidade máxima da fila
+
+**Procedimento:**
+Foi definido um cenário de teste com 20 participantes cadastrados e tentativa de entrada de um 21º participante.
+
+**Resultado esperado:** O sistema deve impedir novas entradas quando atingir a capacidade máxima de 20 participantes.
+
+**Status:** Aguardando confirmação do resultado.
+
+### Teste 5 — Esgotamento dos ingressos
+
+**Procedimento:**
+Foi realizado um cenário de vendas até o esgotamento do estoque inicial de 10 ingressos.
+
+**Resultado observado:**
+- O sistema informou que não havia mais ingressos disponíveis.
+- A quantidade de ingressos disponíveis chegou a zero.
+
+**Status:** Aviso de esgotamento confirmado. Demais verificações pendentes.
+
+### Considerações sobre a capacidade da fila
+
+O TicketQueue utiliza dois limites independentes:
+
+- **Capacidade da fila:** 20 participantes.
+- **Estoque inicial:** 10 ingressos.
+
+Essa diferença permite demonstrar que a capacidade de armazenamento da estrutura de dados não corresponde necessariamente à quantidade de produtos disponíveis.
+
+A estrutura FIFO garante que o atendimento ocorra por ordem de chegada. Já o controle de estoque determina quando as vendas devem ser encerradas.
+
+### Conclusão parcial
+
+Os testes iniciais confirmaram o funcionamento do cadastro, da ordem FIFO e da atualização do estoque após uma compra.
+
+O sistema também apresentou uma mensagem informando o esgotamento dos ingressos.
+
+A validação completa depende da confirmação do comportamento da fila cheia e do bloqueio de novas compras após o esgotamento do estoque.
