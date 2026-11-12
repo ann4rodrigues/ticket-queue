@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketQueue | Travis Scott</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="container barra-superior">
+            <div class="logo">TICKET<span>QUEUE</span></div>
+            <span class="etiqueta">VENDA SIMULADA • PROJETO ACADÊMICO</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="evento">
+            <div class="evento-conteudo">
+                <span class="destaque">LIVE IN SÃO PAULO • EVENTO FICTÍCIO</span>
+
+                <h1>TRAVIS<br><span>SCOTT</span></h1>
+
+                <p class="subtitulo-show">
+                    Uma noite de hip-hop, trap e muita energia.
+                    Entre na fila virtual para garantir seu ingresso simulado.
+                </p>
+
+                <div class="informacoes-evento">
+                    <span>📅 20 de dezembro de 2026</span>
+                    <span>📍 São Paulo, SP</span>
+                    <span>🎟️ Pista • Entrada geral</span>
+                </div>
+            </div>
+
+            <div class="ingresso-visual">
+                <div class="ingresso-topo">TICKETQUEUE • LIVE EXPERIENCE</div>
+
+                <div class="ingresso-centro">
+                    <span>GENERAL ADMISSION</span>
+                    <strong>TRAVIS<br>SCOTT</strong>
+                    <span>SÃO PAULO • 20.12.2026</span>
+                </div>
+
+                <div class="ingresso-rodape">
+                    ADMIT ONE • SIMULAÇÃO
+                </div>
+            </div>
+        </section>
+
+        <section class="estatisticas">
+            <div class="estatistica">
+                <span>Ingressos disponíveis</span>
+                <strong id="estoque">10</strong>
+                <small>Estoque atualizado após cada compra</small>
+            </div>
+
+            <div class="estatistica">
+                <span>Fãs aguardando</span>
+                <strong id="aguardando">0</strong>
+                <small>Fila por ordem de chegada</small>
+            </div>
+
+            <div class="estatistica">
+                <span>Ingressos vendidos</span>
+                <strong id="vendidos">0</strong>
+                <small>Compras simuladas confirmadas</small>
+            </div>
+        </section>
+
+        <section class="painel">
+            <div class="coluna">
+
+                <article class="card">
+                    <div class="titulo-card">
+                        <span class="numero">01</span>
+                        <div>
+                            <h2>Garanta sua posição</h2>
+                            <p>Cadastre seu nome para entrar na fila do show.</p>
+                        </div>
+                    </div>
+
+                    <form id="formulario">
+                        <label for="nome">NOME DO PARTICIPANTE</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            maxlength="59"
+                            autocomplete="off"
+                            placeholder="Digite seu nome completo"
+                        >
+
+                        <button type="submit" id="entrar" class="botao primario">
+                            Entrar na fila →
+                        </button>
+                    </form>
+
+                    <p class="observacao">
+                        Sistema FIFO: primeiro a entrar, primeiro a ser atendido.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="titulo-card">
+                        <span class="numero">03</span>
+                        <div>
+                            <h2>Área de compra</h2>
+                            <p>Participante chamado para comprar o ingresso.</p>
+                        </div>
+                    </div>
+
+                    <div class="pessoa-atual">
+                        <span class="indicador"></span>
+                        <div>
+                            <strong id="atual">Ninguém em atendimento</strong>
+                            <small id="estado-atual">Aguardando chamada</small>
+                        </div>
+                    </div>
+
+                    <button id="confirmar" class="botao confirmar" disabled>
+                        Confirmar compra ✓
+                    </button>
+                </article>
+
+            </div>
+
+            <div class="coluna">
+
+                <article class="card fila-card">
+                    <div class="titulo-card">
+                        <span class="numero">02</span>
+                        <div>
+                            <h2>Fila de espera</h2>
+                            <p>Fãs aguardando a vez de comprar.</p>
+                        </div>
+                    </div>
+
+                    <div class="capacidade">
+                        <div class="capacidade-texto">
+                            <span>Ocupação da fila</span>
+                            <strong id="capacidade">0/20</strong>
+                        </div>
+
+                        <div class="barra-fundo">
+                            <div id="barra" class="barra-progresso"></div>
+                        </div>
+                    </div>
+
+                    <div id="vazia" class="fila-vazia">
+                        <span class="icone-vazio">🎟️</span>
+                        <strong>Nenhum fã na fila</strong>
+                        <p>Os participantes aparecerão aqui.</p>
+                    </div>
+
+                    <ol id="lista" class="lista-fila"></ol>
+
+                    <button id="chamar" class="botao secundario" disabled>
+                        Chamar próximo participante →
+                    </button>
+                </article>
+
+            </div>
+        </section>
+
+        <div id="aviso" class="aviso" role="status" aria-live="polite">
+            Fila virtual aberta. Aguardando participantes.
+        </div>
+
+        <div id="esgotado" class="esgotado" hidden>
+            SOLD OUT! Todos os ingressos foram vendidos.
+        </div>
+
+        <footer>
+            <strong>TICKETQUEUE • TRAVIS SCOTT</strong>
+            <p>Projeto acadêmico • Algoritmos e Estruturas de Dados • Senac</p>
+            <p>
+                Evento fictício para demonstração de fila FIFO.
+                Sem vínculo oficial com o artista e sem pagamentos reais.
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
