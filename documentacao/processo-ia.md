@@ -221,14 +221,26 @@ Foi confirmada a compra do ingresso pela primeira participante atendida.
 
 **Status:** Aprovado.
 
-### Teste 4 — Capacidade máxima da fila
+### Teste 4 — Capacidade máxima e reutilização de posições da fila circular
 
 **Procedimento:**
-Foi definido um cenário de teste com 20 participantes cadastrados e tentativa de entrada de um 21º participante.
 
-**Resultado esperado:** O sistema deve impedir novas entradas quando atingir a capacidade máxima de 20 participantes.
+Foram cadastrados 20 participantes, atingindo a capacidade máxima da fila. Em seguida, foi realizada uma tentativa de cadastrar um 21º participante.
 
-**Status:** Aguardando confirmação do resultado.
+Posteriormente, alguns participantes foram chamados para atendimento, liberando posições na estrutura. Novas tentativas de cadastro foram realizadas.
+
+**Resultados observados:**
+
+- O sistema impediu a entrada do 21º participante enquanto a fila estava cheia.
+- Após a retirada de participantes da fila, novas entradas foram permitidas.
+- As posições liberadas puderam ser reutilizadas.
+- A capacidade máxima de 20 participantes foi respeitada.
+
+**Conclusão:**
+
+O teste demonstrou o funcionamento correto da fila circular, que permite reutilizar posições liberadas durante as operações de remoção e inserção.
+
+**Status:** Aprovado.
 
 ### Teste 5 — Esgotamento dos ingressos
 
