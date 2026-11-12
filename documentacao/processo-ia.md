@@ -139,3 +139,41 @@ A inteligência artificial foi utilizada como ferramenta de apoio à programaç�
 A estrutura de dados central do projeto é uma fila circular FIFO, inicialmente implementada em C e posteriormente adaptada para JavaScript.
 
 O TicketQueue é uma simulação acadêmica, sem comercialização real de ingressos ou vínculo oficial com o artista.
+
+---
+
+## Etapa 8 — Versionamento e publicação no GitHub
+
+**Data:** 11/11/2026
+
+**Objetivo:** Utilizar o Git e o GitHub para armazenar o código-fonte, preservar o histórico de alterações e disponibilizar o projeto para avaliação.
+
+**Ferramentas utilizadas:**
+- Visual Studio Code
+- Terminal PowerShell
+- Git
+- GitHub
+
+**Procedimento realizado:**
+
+1. Inicialização do repositório local com `git init`.
+2. Definição da branch principal com `git branch -M main`.
+3. Adição dos arquivos com `git add .`.
+4. Criação do commit inicial com `git commit -m "Versao inicial TicketQueue - Travis Scott"`.
+5. Conexão ao repositório remoto com `git remote add origin`.
+6. Publicação dos arquivos com `git push -u origin main`.
+
+**Repositório:** https://github.com/ann4rodrigues/ticket-queue
+
+**Commit inicial:** `d357fc7`
+
+**Arquivos publicados:**
+- `index.html`
+- `style.css`
+- `script.js`
+- `documentacao/processo-ia.md`
+- `documentacao/historico-prompt.md`
+
+**Resultado:** O terminal confirmou a publicação na branch `main` e a configuração do acompanhamento da branch remota `origin/main`.
+
+**Conclusão:** O projeto foi armazenado com sucesso no GitHub, permitindo registrar futuras atualizações e acompanhar seu desenvolvimento.

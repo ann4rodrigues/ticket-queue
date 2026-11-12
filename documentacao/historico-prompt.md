@@ -107,6 +107,46 @@ A IA organizou os conteúdos dos dois arquivos e orientou a separação entre di
 
 ---
 
-## Observação importante
+---
 
-Este documento é um índice resumido das interações identificadas. Para atender à exigência de histórico completo, ainda é necessário acrescentar as respostas integrais da IA, os códigos enviados e as interações anteriores relacionadas à versão em C e às primeiras tentativas da versão Web.
+## 11/11/2026 — Publicação no GitHub
+
+**Prompt 10 — Usuária:**
+
+"certo, agr precisamos salvar isso no git hub pelo terminal do vs code"
+
+**Resposta da IA — Resumo:**
+
+A IA orientou a inicialização do Git, a criação da branch `main`, a adição dos arquivos e a realização do commit inicial.
+
+---
+
+**Prompt 11 — Usuária:**
+
+"assim"
+
+**Contexto:** Foi enviada uma captura de tela mostrando que o commit inicial havia sido realizado com sucesso.
+
+**Resposta da IA — Resumo:**
+
+A IA confirmou o commit e explicou como criar um repositório no GitHub, conectar o projeto local e enviar os arquivos com `git push`.
+
+---
+
+**Prompt 12 — Usuária:**
+
+Foi enviada uma captura de tela mostrando a execução bem-sucedida do comando `git push -u origin main`.
+
+**Resposta da IA — Resumo:**
+
+A IA confirmou a publicação do projeto no GitHub e explicou os comandos necessários para enviar futuras atualizações.
+
+---
+
+**Prompt 13 — Usuária:**
+
+"certo, agr preciso atualizar alguma coisa na documentação?"
+
+**Resposta da IA — Resumo:**
+
+A IA orientou a atualização do diário de desenvolvimento e do histórico de prompts para registrar o versionamento e a publicação no GitHub.
