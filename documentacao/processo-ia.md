@@ -2,36 +2,37 @@
 
 ## Informações do projeto
 
-**Disciplina:** Algoritmos e Estruturas de Dados — SENAC  
 **Projeto:** TicketQueue — Fila Virtual para Venda de Ingressos Online  
+**Disciplina:** Algoritmos e Estruturas de Dados  
+**Instituição:** Senac  
 **Linguagens utilizadas:** C, HTML, CSS e JavaScript  
-**Estrutura de dados:** Fila circular baseada em vetor (FIFO)  
-**Ambiente de desenvolvimento:** Visual Studio Code, MSYS2 UCRT64, GCC e navegador Web  
+**Estrutura de dados:** Fila circular FIFO  
+**Ambiente:** Visual Studio Code, GCC, MSYS2 e navegador Web  
 **Versionamento:** Git e GitHub  
+**Período documentado:** 09/11/2026 a 12/11/2026  
 **Repositório:** https://github.com/ann4rodrigues/ticket-queue
 
 ---
 
 ## Etapa 1 — Planejamento do projeto
 
-**Data:** 10/11/2026
+**Data:** 09/11/2026
 
-**Objetivo:** Definir o problema, as funcionalidades e a estrutura de dados que seria utilizada no TicketQueue.
+**Objetivo:** Definir as funcionalidades do TicketQueue e a estrutura de dados utilizada.
 
-**Prompt utilizado:** Solicitação de planejamento do projeto acadêmico conforme as orientações do professor, utilizando o tema de fila virtual para venda de ingressos.
-
-**Resposta recebida:** A IA propôs um sistema que organiza participantes por ordem de chegada, utilizando uma estrutura de dados FIFO (*First In, First Out*).
+**Solicitação à IA:** Desenvolver um projeto acadêmico de fila virtual para venda de ingressos online.
 
 **Decisões tomadas:**
 
-- Desenvolver inicialmente o projeto em linguagem C.
-- Implementar uma fila circular baseada em vetor.
-- Organizar o atendimento pela ordem de chegada.
-- Controlar o estoque de ingressos.
-- Tratar situações de fila cheia, fila vazia e ingressos esgotados.
-- Utilizar uma interface simples para facilitar a demonstração.
+- Utilizar o conceito FIFO (*First In, First Out*).
+- Organizar os participantes por ordem de chegada.
+- Desenvolver inicialmente o projeto em C.
+- Implementar uma fila circular.
+- Controlar a capacidade máxima de participantes.
+- Prever situações de fila cheia, fila vazia e ingressos esgotados.
+- Criar uma interface para demonstrar o funcionamento.
 
-**Resultado:** Foram definidas as funcionalidades, as operações da fila e as etapas de desenvolvimento.
+**Resultado:** Foram definidos o tema, os requisitos e as etapas iniciais de desenvolvimento.
 
 ---
 
@@ -39,11 +40,9 @@
 
 **Data:** 10/11/2026
 
-**Objetivo:** Desenvolver a primeira versão funcional do TicketQueue.
+**Objetivo:** Desenvolver a primeira implementação funcional do TicketQueue.
 
-**Prompt utilizado:** Solicitação de implementação do sistema em C, com explicações das funções e organização dos arquivos.
-
-**Resposta recebida:** A IA auxiliou na implementação das operações de inserção, remoção, consulta e verificação da fila.
+A IA auxiliou na criação da versão original em linguagem C, utilizando uma fila circular baseada em vetor e uma interface gráfica Win32.
 
 **Arquivos desenvolvidos:**
 
@@ -54,26 +53,26 @@
 - `interface.h`
 - `teste_fila.c`
 
-**Estrutura de dados utilizada:**
+**Estrutura utilizada:**
 
-A fila foi implementada utilizando um vetor com capacidade máxima de 20 participantes.
+A fila possuía capacidade máxima de 20 participantes, com três variáveis principais:
 
-Foram utilizadas três variáveis de controle:
+- `inicio`: posição do primeiro participante.
+- `fim`: próxima posição de inserção.
+- `quantidade`: número de participantes aguardando.
 
-- `inicio`: indica a posição do primeiro participante.
-- `fim`: indica a próxima posição disponível para inserção.
-- `quantidade`: controla o número de participantes aguardando.
+**Funções principais:**
 
-**Principais funções:**
+- `inicializar_fila()`
+- `fila_vazia()`
+- `fila_cheia()`
+- `enfileirar()`
+- `desenfileirar()`
+- `mostrar_fila()`
 
-- `inicializar_fila()`: inicializa a estrutura.
-- `fila_vazia()`: verifica se não existem participantes aguardando.
-- `fila_cheia()`: verifica se a capacidade máxima foi atingida.
-- `enfileirar()`: adiciona um participante ao final da fila.
-- `desenfileirar()`: remove o primeiro participante.
-- `mostrar_fila()`: consulta os participantes sem removê-los.
+**Resultado:** Foi criada uma implementação inicial capaz de demonstrar as operações FIFO.
 
-**Resultado:** Foi desenvolvida uma implementação em C que utiliza uma fila circular para organizar o atendimento FIFO.
+**Observação:** Esta etapa descreve a versão original, posteriormente substituída por uma implementação simplificada em um único arquivo C.
 
 ---
 
@@ -81,26 +80,26 @@ Foram utilizadas três variáveis de controle:
 
 **Data:** 10–11/11/2026
 
-**Objetivo:** Configurar o ambiente de programação em C e testar as ferramentas necessárias.
+**Objetivo:** Configurar as ferramentas necessárias para desenvolver e executar programas em C.
 
-**Solicitações realizadas à IA:**
+**Atividades realizadas:**
 
-- Identificação do terminal correto do MSYS2.
-- Orientações para atualização do MSYS2.
+- Configuração do MSYS2 UCRT64.
 - Instalação e verificação do GCC.
+- Configuração do Visual Studio Code.
 - Instalação da biblioteca Allegro 5.
-- Configuração do terminal UCRT64 no Visual Studio Code.
-- Correção do reconhecimento de bibliotecas pelo IntelliSense.
+- Ajustes nos diretórios de inclusão do compilador.
+- Correção de problemas de reconhecimento de bibliotecas.
 
 **Problema encontrado:** O Visual Studio Code não reconhecia inicialmente o cabeçalho `allegro5/allegro.h`.
 
-**Correção:** Foram configurados o caminho do compilador e os diretórios de inclusão no VS Code.
+**Solução:** Foram configurados os caminhos do compilador e das bibliotecas.
 
-**Teste realizado:** Compilação e execução de um programa que criava uma janela gráfica de 800 × 600 pixels durante cinco segundos.
+**Teste realizado:** Execução de um programa de teste que abria uma janela de 800 × 600 pixels.
 
-**Resultado:** A janela abriu corretamente e fechou após o tempo programado. Foi registrada a utilização da versão 5.2.11 do Allegro.
+**Resultado:** O ambiente gráfico de teste funcionou corretamente.
 
-**Observação importante:** Embora o Allegro tenha sido configurado e testado durante o desenvolvimento, a interface gráfica original do TicketQueue foi implementada utilizando a API Win32 do Windows, e não o Allegro.
+**Observação:** O Allegro foi utilizado em testes de configuração, mas a interface gráfica original do TicketQueue utilizava Win32. A versão final simplificada não depende de nenhuma dessas bibliotecas gráficas.
 
 ---
 
@@ -108,34 +107,32 @@ Foram utilizadas três variáveis de controle:
 
 **Data:** 11/11/2026
 
-**Objetivo:** Organizar os arquivos e preparar a estrutura do projeto para desenvolvimento e documentação.
+**Objetivo:** Organizar os arquivos de código e documentação.
 
-**Problemas encontrados:**
+**Dificuldades encontradas:**
 
 - Arquivos inicialmente acessados dentro de um ZIP.
 - Dificuldade para abrir a pasta correta no VS Code.
-- Arquivos duplicados ou auxiliares fora da pasta principal.
-- Diário de desenvolvimento ainda incompleto.
+- Existência de arquivos auxiliares e duplicados.
+- Documentação incompleta.
 
-**Orientações recebidas da IA:**
+**Orientações da IA:**
 
-- Extrair os arquivos do ZIP.
-- Abrir a pasta correta no Visual Studio Code.
-- Identificar os arquivos principais do projeto.
-- Preservar os códigos originais e os backups.
-- Registrar as etapas de desenvolvimento.
+- Identificar a pasta principal do projeto.
+- Separar os arquivos de código e documentação.
+- Preservar os códigos originais.
+- Registrar as alterações realizadas.
+- Evitar a exclusão de arquivos antes de manter uma cópia.
 
-**Resultado:** Os arquivos foram organizados e a documentação passou a ser atualizada durante o desenvolvimento.
+**Resultado:** Os arquivos foram reorganizados para facilitar o desenvolvimento e o versionamento.
 
 ---
 
-## Etapa 5 — Compilação e testes funcionais da versão em C
+## Etapa 5 — Compilação e testes da implementação original em C
 
 **Data:** 11/11/2026
 
-**Objetivo:** Verificar o funcionamento da interface gráfica, da fila FIFO e do controle de ingressos.
-
-**Solicitação à IA:** Orientar a compilação e os testes do TicketQueue no Visual Studio Code.
+**Objetivo:** Verificar o funcionamento da versão original com interface gráfica Win32.
 
 **Comando de compilação registrado:**
 
@@ -143,127 +140,85 @@ Foram utilizadas três variáveis de controle:
 gcc main.c fila.c interface.c -o TicketQueue.exe -mwindows
 ```
 
-**Resultado da compilação:** O executável foi gerado sem mensagens de erro.
-
 ### Teste 1 — Inicialização
 
-- Interface gráfica aberta corretamente.
-- Estoque inicial de 10 ingressos.
-- Botões de atendimento desativados quando a fila estava vazia.
+A interface gráfica foi aberta, apresentando o estoque inicial de 10 ingressos.
 
-**Resultado:** APROVADO.
+**Resultado:** Aprovado.
 
 ### Teste 2 — Cadastro de participantes
 
-Foram cadastrados os participantes:
+Foram cadastrados três participantes:
 
-1. Ana — posição 1.
-2. Raissa — posição 2.
-3. Bia — posição 3.
+1. Ana.
+2. Raissa.
+3. Bia.
 
-**Resultado:** APROVADO.
+**Resultado:** Aprovado.
 
 ### Teste 3 — Atendimento FIFO
 
-O botão de chamar o próximo participante foi acionado.
+Ao chamar o próximo participante, Ana foi selecionada primeiro.
 
-Ana foi chamada primeiro, respeitando a ordem de chegada.
+**Resultado:** Aprovado.
 
-**Resultado:** APROVADO.
+### Teste 4 — Confirmação de compra
 
-### Teste 4 — Confirmação da compra
+Após a confirmação de uma compra, o estoque passou de 10 para 9 ingressos.
 
-- Compra de Ana confirmada.
-- Estoque atualizado de 10 para 9 ingressos.
-- Atendimento encerrado.
+**Resultado:** Aprovado.
 
-**Resultado:** APROVADO.
+### Resultado geral
 
-**Resultado geral:** A implementação demonstrou corretamente o funcionamento das operações básicas de inserção, remoção e atendimento FIFO nos cenários testados.
+Os testes demonstraram o funcionamento das operações básicas da fila FIFO e do controle de estoque da implementação original.
 
-**Observação técnica:** A fila utilizada é circular e baseada em vetor, com capacidade máxima de 20 participantes. A interface gráfica utiliza a API Win32.
+**Limitação:** Não foram confirmados nessa etapa os testes completos de fila cheia, reutilização circular e esgotamento total dos ingressos.
 
-**Testes ainda não confirmados nessa versão:** Capacidade máxima da fila, reutilização das posições circulares e esgotamento total dos ingressos.
+**Observação:** Esses resultados pertencem à implementação original, não à versão simplificada em C.
 
 ---
 
-## Etapa 6 — Migração para a versão Web
+## Etapa 6 — Desenvolvimento da versão Web
 
 **Data:** 11/11/2026
 
-**Objetivo:** Desenvolver uma versão Web do TicketQueue, preservando a lógica FIFO implementada inicialmente em C.
+**Objetivo:** Criar uma versão do TicketQueue executada diretamente no navegador.
 
-**Solicitações à IA:**
+**Tecnologias utilizadas:**
 
-- Reconstruir o projeto utilizando HTML, CSS e JavaScript.
-- Criar uma nova pasta de trabalho.
-- Fornecer os códigos diretamente na conversa para copiar no VS Code.
-- Personalizar a interface para a simulação de um show do Travis Scott.
-- Melhorar a aparência visual da página.
+- HTML para a estrutura da página.
+- CSS para a aparência visual.
+- JavaScript para as operações da fila.
 
-**Decisões tomadas:**
-
-- Utilizar HTML para estruturar a página.
-- Utilizar CSS para a identidade visual.
-- Utilizar JavaScript para implementar a fila circular.
-- Manter a capacidade máxima de 20 participantes.
-- Manter o estoque inicial de 10 ingressos.
-- Preservar o atendimento FIFO.
-- Executar o sistema diretamente no navegador.
-
-**Arquivos principais:**
+**Arquivos desenvolvidos:**
 
 - `index.html`
 - `style.css`
 - `script.js`
 
-### Funcionamento da versão Web
+**Decisões tomadas:**
 
-O sistema permite cadastrar participantes, visualizar a fila, chamar o próximo participante e confirmar compras.
+- Preservar o conceito FIFO.
+- Manter a capacidade máxima de 20 participantes.
+- Manter o estoque inicial de 10 ingressos.
+- Implementar uma fila circular em JavaScript.
+- Personalizar a interface para uma simulação fictícia de show do Travis Scott.
 
-A lógica utiliza os índices `inicio` e `fim`, além da variável `quantidade`, assim como na implementação original em C.
+### Testes da versão Web
 
-O operador módulo (`%`) é utilizado para permitir a reutilização circular das posições do vetor.
+**Teste 1 — Ordem FIFO:** Ana foi atendida antes de Raissa e Bia. Resultado: aprovado.
 
-### Testes realizados
+**Teste 2 — Controle de estoque:** Uma compra reduziu o estoque de 10 para 9 ingressos. Resultado: aprovado.
 
-**Teste 1 — Cadastro e ordem FIFO**
+**Teste 3 — Fila cheia:** Após cadastrar 20 participantes, a tentativa de entrada do 21º foi impedida. Resultado: aprovado.
 
-Foram cadastrados Ana, Raissa e Bia. Ana foi chamada primeiro.
+**Teste 4 — Reutilização circular:** Após o atendimento de participantes, novas pessoas conseguiram entrar na fila. Resultado: aprovado.
 
-**Resultado:** APROVADO.
+**Teste 5 — Esgotamento de ingressos:** O sistema apresentou uma mensagem informando que não havia mais ingressos disponíveis. Resultado: mensagem confirmada.
 
-**Teste 2 — Controle de estoque**
+**Limitação:** O bloqueio de todas as operações após o esgotamento não foi registrado como teste independente.
 
-Após a confirmação de uma compra, o estoque passou de 10 para 9 ingressos.
-
-**Resultado:** APROVADO.
-
-**Teste 3 — Capacidade máxima da fila**
-
-Foram cadastrados 20 participantes. A tentativa de entrada do 21º participante foi impedida.
-
-**Resultado:** APROVADO.
-
-**Teste 4 — Reutilização de posições**
-
-Após a retirada de participantes, novas pessoas conseguiram entrar na fila.
-
-Esse comportamento demonstrou a reutilização das posições liberadas no vetor circular.
-
-**Resultado:** APROVADO.
-
-**Teste 5 — Esgotamento de ingressos**
-
-O estoque foi reduzido até chegar a zero.
-
-O sistema apresentou uma mensagem informando que não havia mais ingressos disponíveis.
-
-**Resultado:** Mensagem de esgotamento confirmada.
-
-**Observação:** O bloqueio de todas as operações de atendimento e compra após o esgotamento não foi registrado como teste independente.
-
-**Resultado geral:** A versão Web demonstrou o funcionamento da fila circular FIFO nos cenários testados, com interface personalizada para o evento fictício.
+**Resultado geral:** A versão Web demonstrou a aplicação da fila circular FIFO em uma simulação visual de venda de ingressos.
 
 ---
 
@@ -271,30 +226,28 @@ O sistema apresentou uma mensagem informando que não havia mais ingressos dispo
 
 **Data:** 11/11/2026
 
-**Objetivo:** Publicar o projeto em um repositório remoto para permitir o acesso ao código e registrar seu desenvolvimento.
-
-**Solicitação à IA:** Orientar a utilização do Git e do GitHub pelo terminal do Visual Studio Code.
+**Objetivo:** Publicar o código-fonte e registrar o desenvolvimento do projeto.
 
 **Ferramentas utilizadas:**
 
 - Git.
 - GitHub.
-- Terminal PowerShell do VS Code.
+- PowerShell integrado ao Visual Studio Code.
 
 **Etapas realizadas:**
 
 1. Inicialização do repositório Git.
 2. Configuração da branch `main`.
-3. Adição dos arquivos do projeto.
+3. Adição dos arquivos.
 4. Criação do commit inicial.
 5. Conexão com o repositório remoto.
-6. Envio dos arquivos utilizando `git push`.
+6. Envio utilizando `git push`.
 
 **Commit inicial registrado:** `d357fc7`
 
 **Repositório:** https://github.com/ann4rodrigues/ticket-queue
 
-**Resultado:** A versão Web do TicketQueue foi publicada com sucesso no GitHub.
+**Resultado:** A versão Web foi publicada no GitHub.
 
 ---
 
@@ -302,165 +255,250 @@ O sistema apresentou uma mensagem informando que não havia mais ingressos dispo
 
 **Data:** 12/11/2026
 
-**Objetivo:** Recuperar os arquivos originais do TicketQueue desenvolvidos em linguagem C e adicioná-los ao repositório do GitHub, preservando a implementação Web.
+**Objetivo:** Preservar os arquivos originais em C no mesmo repositório da versão Web.
 
-### 8.1. Recuperação dos arquivos
+### 8.1. Recuperação
 
-Durante a organização do projeto, foram localizados os arquivos da implementação original em C:
+Foram recuperados os arquivos:
 
-- `fila.h`
 - `fila.c`
+- `fila.h`
 - `main.c`
-- `interface.h`
 - `interface.c`
+- `interface.h`
 - `teste_fila.c`
 
-Também foram identificados arquivos de documentação e um executável compilado.
+Os arquivos foram organizados na pasta `versao-c/TicketQueue`.
 
-A versão original foi preservada para permitir o estudo da estrutura de dados FIFO e sua comparação com a implementação em JavaScript.
+### 8.2. Análise da estrutura
 
-### 8.2. Análise da estrutura FIFO
+A IA auxiliou na identificação dos elementos principais:
 
-Os arquivos `fila.h` e `fila.c` foram compartilhados com a inteligência artificial para análise e explicação.
+- Vetor de capacidade 20.
+- Índices `inicio` e `fim`.
+- Contador `quantidade`.
+- Operações de inserção e remoção.
+- Utilização do operador módulo `%`.
+- Atendimento FIFO.
 
-Foram identificados os seguintes elementos:
+### 8.3. Dificuldades com o Git
 
-- Vetor de capacidade máxima de 20 participantes.
-- Variável `inicio`, que indica o primeiro participante.
-- Variável `fim`, que indica a próxima posição de inserção.
-- Variável `quantidade`, que controla o número de participantes.
-- Funções `enfileirar()` e `desenfileirar()`.
-- Funções `fila_vazia()`, `fila_cheia()` e `mostrar_fila()`.
-
-A implementação utiliza uma fila circular e o operador módulo (`%`) para permitir que os índices retornem ao início do vetor.
-
-O princípio FIFO garante que o primeiro participante cadastrado seja o primeiro a ser atendido.
-
-### 8.3. Organização dos arquivos
-
-Foi criada uma pasta denominada `versao-c` dentro do projeto Web.
-
-Os arquivos originais foram copiados para essa pasta, mantendo as versões em C e JavaScript no mesmo repositório.
-
-**Estrutura do projeto:**
-
-```text
-Ticket-Final/
-├── index.html
-├── style.css
-├── script.js
-├── documentacao/
-│   ├── processo-ia.md
-│   └── historico-prompt.md
-└── versao-c/
-    └── TicketQueue/
-        ├── fila.c
-        ├── fila.h
-        ├── main.c
-        ├── interface.c
-        ├── interface.h
-        ├── teste_fila.c
-        ├── README.md
-        └── processo-ia.md
-```
-
-O executável `TicketQueue.exe` foi mantido fora do envio ao GitHub, pois não é necessário para a análise do código-fonte.
-
-### 8.4. Dificuldades encontradas
-
-Durante a publicação, o comando `git status` apresentou o erro:
+Durante o processo, ocorreu o erro:
 
 ```text
 fatal: not a git repository
 ```
 
-A causa foi a execução do comando fora da pasta principal do repositório.
+**Causa:** Os comandos estavam sendo executados fora da pasta principal do repositório.
 
-Após acessar a pasta `Ticket-Final`, o Git passou a reconhecer corretamente o projeto.
+**Solução:** Acessar a pasta `Ticket-Final` antes de executar os comandos Git.
 
-Posteriormente, a pasta `versao-c` apareceu como não rastreada (*untracked*).
+Também foram encontrados avisos de conversão de quebras de linha LF/CRLF, que não impediram o versionamento.
 
-Uma tentativa inicial de commit não incluiu os arquivos, e o Git informou que não havia alterações preparadas.
+### 8.4. Publicação
 
-### 8.5. Solução aplicada
+Foram utilizados comandos de adição, commit e envio dos arquivos.
 
-A inteligência artificial orientou a inclusão dos arquivos de código-fonte e documentação utilizando o comando:
+**Resultado:** A versão original em C passou a integrar o repositório, permitindo sua consulta e comparação com a implementação Web.
 
-```powershell
-git add -- "versao-c/**/*.c" "versao-c/**/*.h" "versao-c/**/*.md"
-```
-
-Em seguida, foram utilizados os comandos:
-
-```powershell
-git commit -m "Adiciona codigo original em C do TicketQueue"
-git push
-```
-
-Durante a preparação dos arquivos, apareceram avisos relacionados à conversão de quebras de linha de LF para CRLF, que não impediram o versionamento.
-
-### 8.6. Resultado
-
-A publicação foi confirmada por meio da interface do GitHub.
-
-O repositório passou a apresentar:
-
-- `documentacao/`: histórico e diário de desenvolvimento.
-- `versao-c/TicketQueue/`: implementação original em C.
-- `index.html`, `style.css` e `script.js`: implementação Web.
-
-**Repositório:** https://github.com/ann4rodrigues/ticket-queue
-
-A recuperação dos arquivos permitiu preservar as duas versões do projeto e disponibilizar o código em C para estudo da estrutura FIFO.
+**Observação:** Posteriormente, foi identificado que um executável `.exe` também havia sido enviado. Foi recomendada sua remoção do controle de versão e a utilização de um arquivo `.gitignore`.
 
 ---
 
-## Etapa 9 — Preparação para a apresentação
+## Etapa 9 — Estudo e preparação para a apresentação
 
 **Data:** 12/11/2026
 
-**Objetivo:** Preparar a equipe para explicar o funcionamento do TicketQueue e demonstrar a aplicação dos conceitos de estrutura de dados.
+**Objetivo:** Compreender o funcionamento do código para explicar as decisões técnicas ao professor.
 
-**Atividades realizadas:**
+**Conteúdos estudados:**
 
-- Revisão do código original em C.
-- Explicação das estruturas `Usuario` e `Fila`.
-- Análise das funções `enfileirar()` e `desenfileirar()`.
-- Explicação das verificações de fila cheia e fila vazia.
-- Estudo da utilização do operador módulo na fila circular.
-- Seleção de trechos do código para demonstrar o funcionamento FIFO.
+- Conceito FIFO.
+- Funcionamento de uma fila circular.
+- Diferença entre capacidade e quantidade de participantes.
+- Índices `inicio` e `fim`.
+- Operações `enfileirar()` e `desenfileirar()`.
+- Tratamento de fila cheia e vazia.
+- Reutilização de posições com o operador `%`.
 
-**Pontos principais para a apresentação:**
+Durante essa preparação, também foi discutida a possibilidade de utilizar uma fila de tamanho variável, em comparação com a capacidade fixa de 20 posições.
 
-1. O conceito FIFO e sua aplicação no sistema.
-2. O funcionamento dos índices `inicio` e `fim`.
-3. A utilização do vetor de 20 posições.
-4. A inserção e remoção de participantes.
-5. A reutilização de posições na fila circular.
-6. A relação entre a versão original em C e a versão Web em JavaScript.
+**Resultado:** O estudo ajudou a identificar a necessidade de simplificar o código em C para aproximá-lo dos conteúdos abordados em aula.
 
-**Próxima atividade:** Continuar o estudo do código e ensaiar a demonstração do sistema.
+---
+
+## Etapa 10 — Simplificação da implementação em C
+
+**Data:** 12/11/2026
+
+**Objetivo:** Adequar a implementação em C ao nível de conhecimento da equipe, mantendo a lógica FIFO.
+
+### 10.1. Justificativa
+
+A implementação original utilizava vários arquivos e uma interface gráfica Win32.
+
+Após revisar o projeto e os conteúdos estudados na disciplina, foi decidido que uma implementação mais simples seria suficiente para demonstrar a estrutura de dados.
+
+Como a versão Web já oferecia uma interface visual, a versão em C passou a ter como objetivo principal a demonstração da fila no terminal.
+
+### 10.2. Referência utilizada
+
+A organização do novo código foi baseada no estilo de um exemplo de pilha apresentado pelo professor.
+
+Esse exemplo utilizava:
+
+- Vetor global.
+- Variáveis globais de controle.
+- Funções declaradas antes de `main()`.
+- Menu textual.
+- Estruturas condicionais e de repetição.
+
+A lógica da pilha não foi copiada, pois o TicketQueue utiliza fila FIFO, e não pilha LIFO.
+
+### 10.3. Alterações realizadas
+
+- Reunião do código em um único `main.c`.
+- Remoção da dependência da interface gráfica Win32.
+- Utilização de matriz de caracteres para armazenar nomes.
+- Utilização de variáveis globais.
+- Implementação de menu no terminal.
+- Manutenção da fila circular.
+- Preservação da capacidade de 20 participantes.
+- Separação entre a demonstração em C e a simulação Web.
+
+### 10.4. Estrutura de dados atual
+
+```c
+#define MAX 20
+#define TAM_NOME 60
+
+char fila[MAX][TAM_NOME];
+
+int inicio = 0;
+int fim = 0;
+int quantidade = 0;
+```
+
+A matriz `fila` armazena os nomes dos participantes.
+
+As variáveis `inicio`, `fim` e `quantidade` controlam o funcionamento da fila.
+
+A operação circular utiliza o operador módulo:
+
+```c
+fim = (fim + 1) % MAX;
+inicio = (inicio + 1) % MAX;
+```
+
+### 10.5. Funções implementadas
+
+- `fila_vazia()`: verifica se a fila está vazia.
+- `fila_cheia()`: verifica se a fila está cheia.
+- `enfileirar()`: adiciona um participante.
+- `desenfileirar()`: atende o primeiro participante.
+- `consultar_primeiro()`: consulta o próximo sem removê-lo.
+- `mostrar_fila()`: apresenta os participantes em ordem.
+- `mostrar_quantidade()`: exibe a quantidade atual.
+- `limpar_entrada()`: descarta caracteres restantes da entrada.
+- `main()`: controla o menu e a execução.
+
+### 10.6. Menu da aplicação
+
+```text
+===== TICKETQUEUE =====
+1 - Entrar na fila
+2 - Atender proximo usuario
+3 - Mostrar fila
+4 - Mostrar quantidade de usuarios
+5 - Consultar proximo usuario
+0 - Sair
+```
+
+O programa utiliza `do...while` para repetir o menu e `switch...case` para selecionar as operações.
+
+### 10.7. Compilação
+
+O código pode ser compilado com GCC:
+
+```bash
+gcc main.c -o TicketQueue.exe
+```
+
+No PowerShell, a execução pode ser realizada com:
+
+```powershell
+.\TicketQueue.exe
+```
+
+A versão atual não depende de bibliotecas gráficas.
+
+### 10.8. Diferença entre as implementações
+
+**Versão C atual:**
+
+- Executada no terminal.
+- Código concentrado em `main.c`.
+- Demonstração da fila circular FIFO.
+- Capacidade máxima de 20 participantes.
+- Não possui venda ou controle de estoque de ingressos.
+
+**Versão Web:**
+
+- Executada no navegador.
+- Desenvolvida em HTML, CSS e JavaScript.
+- Interface visual personalizada.
+- Fila circular FIFO.
+- Simulação de venda de ingressos.
+- Estoque inicial de 10 ingressos.
+
+As duas versões são independentes e não compartilham automaticamente os dados cadastrados.
+
+### 10.9. Testes da nova implementação
+
+O código foi organizado para permitir os seguintes testes:
+
+1. Cadastro de participantes.
+2. Atendimento por ordem FIFO.
+3. Consulta do próximo participante.
+4. Exibição da fila.
+5. Verificação de fila vazia.
+6. Verificação de fila cheia.
+7. Reutilização circular das posições.
+8. Tratamento de opções inválidas.
+
+**Situação:** A nova implementação foi disponibilizada para execução. Os testes completos de capacidade e reutilização circular ainda precisam ser confirmados e registrados pela equipe.
+
+### 10.10. Resultado
+
+A implementação em C foi simplificada, aproximando sua estrutura dos conteúdos estudados na disciplina.
+
+O funcionamento FIFO foi preservado, enquanto a organização do código passou a utilizar apenas um arquivo principal e um menu textual.
 
 ---
 
 ## Histórico das interações com inteligência artificial
 
-Este documento apresenta o registro cronológico das principais etapas, decisões, dificuldades e resultados do desenvolvimento do TicketQueue.
-
 O histórico dos prompts e das respostas da IA está organizado separadamente no arquivo:
 
 `documentacao/historico-prompt.md`
 
-**Limitação documental:** Parte das respostas antigas da IA foi recuperada por meio de resumos e reconstruções. Esses registros não substituem as transcrições literais completas das conversas originais.
+Esse documento registra as solicitações realizadas, as respostas resumidas e as decisões tomadas durante o desenvolvimento.
 
-Para atender à exigência de histórico integral, as conversas originais e os códigos completos fornecidos pela IA devem ser preservados e anexados quando disponíveis.
+**Limitação documental:** Parte das respostas antigas foi recuperada por meio de resumos. Esses registros não substituem as transcrições completas das conversas originais.
 
-**Evidências do desenvolvimento:**
+Para atender a uma exigência de histórico integral, devem ser preservadas as conversas originais e os códigos fornecidos pela IA, quando disponíveis.
 
-- Arquivos originais em C.
-- Código da versão Web.
-- Registros dos testes realizados.
-- Capturas de tela da execução.
+---
+
+## Evidências do desenvolvimento
+
+As principais evidências do projeto são:
+
+- Código original em C.
+- Código simplificado em `main.c`.
+- Arquivos da versão Web.
+- Registros de testes.
+- Capturas de tela.
 - Histórico de commits do GitHub.
 - Diário de desenvolvimento.
 - Histórico de prompts e respostas da IA.
@@ -469,14 +507,14 @@ Para atender à exigência de histórico integral, as conversas originais e os c
 
 ## Conclusão
 
-O desenvolvimento do TicketQueue permitiu aplicar o conceito de fila FIFO em uma simulação de venda de ingressos online.
+O desenvolvimento do TicketQueue permitiu aplicar o conceito de fila FIFO em uma simulação acadêmica de atendimento para venda de ingressos online.
 
-A primeira versão foi desenvolvida em linguagem C, utilizando uma fila circular baseada em vetor e uma interface gráfica Win32.
+O projeto passou por diferentes etapas, incluindo implementação inicial em C, configuração do ambiente, testes, desenvolvimento da versão Web, publicação no GitHub e simplificação do código original.
 
-Posteriormente, o sistema foi adaptado para HTML, CSS e JavaScript, preservando os principais conceitos da estrutura de dados.
+A versão atual em C utiliza uma matriz de caracteres, variáveis globais e funções simples, permitindo demonstrar as operações fundamentais de uma fila circular.
 
-Os testes realizados demonstraram o funcionamento do atendimento por ordem de chegada, do controle de estoque, da capacidade máxima da fila e da reutilização de posições.
+A versão Web permanece como demonstração visual da aplicação de venda de ingressos.
 
-A utilização da inteligência artificial contribuiu para o planejamento, a implementação, a resolução de problemas, a documentação e a organização do projeto.
+A utilização da inteligência artificial contribuiu para o planejamento, a programação, a identificação de problemas, a documentação e a organização do desenvolvimento.
 
-As duas versões foram preservadas no GitHub para consulta, estudo e apresentação acadêmica.
+As alterações realizadas foram registradas para preservar o histórico e justificar as decisões técnicas adotadas.

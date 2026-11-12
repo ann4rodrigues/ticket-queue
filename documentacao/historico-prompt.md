@@ -393,3 +393,53 @@ O projeto permitiu aplicar o conceito de fila FIFO em uma situação prática, s
 O processo também envolveu a resolução de problemas, a escolha de tecnologias, a organização do código e a utilização de ferramentas de versionamento.
 
 A documentação registra as principais decisões tomadas durante o desenvolvimento e os resultados observados nos testes realizados.
+
+### Registro 48 — Consolidação da implementação simplificada em C
+
+**Data:** 12/11/2026
+
+**Solicitação da usuária — Resumo:** Revisar a organização do TicketQueue após a substituição da implementação original em C por um único arquivo `main.c`, adequado aos conteúdos estudados na disciplina.
+
+**Contexto:** A implementação anterior utilizava vários arquivos e uma interface gráfica Win32. A nova implementação utiliza matriz de caracteres, variáveis globais, funções simples e um menu textual.
+
+**Elementos do código apresentado:**
+
+```c
+#define MAX 20
+#define TAM_NOME 60
+
+char fila[MAX][TAM_NOME];
+
+int inicio = 0;
+int fim = 0;
+int quantidade = 0;
+```
+
+**Resposta da IA — Resumo:** A IA analisou a nova organização e identificou a necessidade de atualizar a documentação, distinguindo a implementação original da versão simplificada.
+
+**Decisões tomadas:**
+
+- Manter a fila circular FIFO.
+- Utilizar um único arquivo `main.c`.
+- Executar o programa no terminal.
+- Remover a dependência da interface gráfica em C.
+- Preservar a versão Web.
+- Atualizar o diário de desenvolvimento e o README.
+- Preservar o histórico da implementação anterior.
+
+**Resultado:** A implementação simplificada passou a ser a versão principal em C para a apresentação acadêmica.
+
+---
+
+### Registro 49 — Atualização da documentação sem download de arquivos
+
+**Data:** 12/11/2026
+
+**Prompt original da usuária:**
+
+> nn quero instalar nenhum arquivo, só me mande aqui no chat para eu copiar e colar
+
+**Resposta da IA — Resumo:** A IA forneceu diretamente na conversa os textos necessários para atualizar o diário de desenvolvimento, o histórico de prompts e o README da versão em C.
+
+**Decisão:** Realizar as alterações manualmente no Visual Studio Code, preservando os arquivos já existentes.
+
