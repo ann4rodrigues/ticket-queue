@@ -518,3 +518,41 @@ A versão Web permanece como demonstração visual da aplicação de venda de in
 A utilização da inteligência artificial contribuiu para o planejamento, a programação, a identificação de problemas, a documentação e a organização do desenvolvimento.
 
 As alterações realizadas foram registradas para preservar o histórico e justificar as decisões técnicas adotadas.
+
+### 10.9. Testes da nova implementação em C
+
+**Data:** 12/11/2026
+
+Os testes foram realizados utilizando um compilador C online, com a versão simplificada do programa.
+
+**Teste 1 — Atendimento FIFO**
+
+Foram cadastrados três participantes: Ana, Raissa e Bia.
+
+Ao executar a operação de atendimento, Ana foi atendida primeiro, respeitando a ordem de chegada.
+
+**Resultado: APROVADO.**
+
+**Teste 2 — Capacidade máxima**
+
+Foram cadastrados 20 participantes, preenchendo todas as posições disponíveis.
+
+Ao tentar cadastrar o 21º participante, o programa impediu a entrada.
+
+**Resultado: APROVADO.**
+
+**Teste 3 — Reutilização das posições**
+
+Após preencher a fila, os dois primeiros participantes foram atendidos.
+
+Em seguida, foram cadastrados dois novos participantes.
+
+O programa permitiu as novas entradas e manteve a ordem FIFO, com 20 participantes na fila.
+
+**Resultado: APROVADO.**
+
+**Conclusão dos testes**
+
+Os resultados confirmaram o funcionamento da ordem FIFO, do controle de capacidade e da reutilização circular das posições.
+
+Ainda podem ser realizados testes adicionais de fila vazia, consulta do primeiro participante e tratamento de opções inválidas. 
